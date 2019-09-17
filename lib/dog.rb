@@ -27,7 +27,12 @@ class Dog
   end
 
   def self.print_all
-    puts @@names
-  end
-
+    names_list = [ ]
+    @@names.each do |thing|
+      if names_list.include?(thing) == false
+        names_list << "#{thing}"
+      end
+    end
+  puts names_list
+end
 end
